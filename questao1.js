@@ -52,3 +52,19 @@ function classificarIdade() {
     }
 
 }
+
+function tabuadaPersonalizada() {
+    let nono = document.getElementById("numero").value;
+     let numero1 = parseInt(nono);
+     let resultado = "";
+
+     if (isNaN(numero1)) {
+         alert("Entrada inválida! Por favor, digite um número.");
+         return; 
+     }
+    
+     for (let i = 1; i <= 10; i++) {
+         resultado += `${numero1} x ${i} = ${numero1 * i}\n`;
+    }
+    tabuadaTudo.innerHTML = resultado
+ }
