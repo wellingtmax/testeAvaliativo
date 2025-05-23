@@ -97,16 +97,25 @@
     <div>
         <h1>Tabuada</h1>
         <input type="number" id="numero" placeholder="Digite um numero para ter sua tabuada">
-        <button onclick="tabuadaPersonalizada">Listar</button>
-        <p id="tabuadaTudo"></p>
+        <button onclick="tabuadaPersonalizada()">Listar</button>
+        <p id="resultado2"></p>
     </div>
 
     <div>
-        <h1>Calcular</h1>
+        <h1>-Soma de Pares-</h1>
+        <input type="number" id="somaP">
+        <button onclick="somaParesWhile()">Somar</button>
+        <p id="resultadoSoma"></p>
     </div>
 
     <div>
-        <h1>Calcular</h1>
+        <h1>Validação</h1>
+        <label for="senhaInput">Digite a senha:((sena123))</label>
+        <input type="password" id="senhaInput">
+        
+        <button id="btnVerificar" onclick="validaSenha()">Verificar</button>
+        
+        <p id="mensagemAcesso">Você tem 3 tentativa(s) restante(s).</p>
     </div>
 
     <div>
