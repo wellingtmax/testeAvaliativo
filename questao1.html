@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -13,27 +16,40 @@
         padding: 0;
     }
 
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
     body {
         display: flex;
         flex-wrap: wrap;
-        padding: 200px;
         justify-items: center;
         align-items: center;
         background: black;
+        background-image: url(1366_2000.jpeg);
     }
 
     h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 30px;
+        font-family: ;
+        font-size: 20px;
+        padding: 10px;
+    }
+    h2{
+        padding: 20px;
     }
 
     div {
         text-align: center;
         padding: 50px;
         flex-wrap: wrap;
-        background: whitesmoke;
-        width: 500px;
+        width: 40%;
+        height: 400px;
         margin: 10px;
+        border-radius: 20px;
+        background: rgba(187, 183, 183, 0.801);
     }
 
     input {
@@ -41,6 +57,7 @@
         padding: 20px;
         border-radius: 5px;
         border: blue solid 1px;
+        box-shadow: 5px 5px 20px black;
     }
 
     button {
@@ -48,7 +65,8 @@
         padding: 10px;
         border-radius: 5px;
         border: solid 1px;
-
+        background: rgba(103, 241, 195, 0.76);
+        box-shadow: 5px 5px 20px black;
     }
 
     button:hover {
@@ -60,6 +78,8 @@
         background: white;
         padding: 10px;
         margin: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.575);
+        box-shadow: 5px 5px 20px black;
     }
 
     #operador {
@@ -69,12 +89,13 @@
         padding: 10px;
         width: 20px;
         height: 20px;
+        
     }
 </style>
 
 <body>
     <div>
-        <h1>Calcular</h1>
+        <h1 class="press-start-2p-regular">Calcular</h1>
         <input type="number" name="number" id="numero1" placeholder="Digite um numero">
         <h2>* - + /</h2>
         <input type="text" id="operador" maxlength="1" placeholder="op">
@@ -84,7 +105,7 @@
     </div>
 
     <div>
-        <h1>Idade</h1>
+        <h1 class="press-start-2p-regular">Idade</h1>
         <h2>Nome</h2>
         <input type="text" id="nome" placeholder="Digite seu nome">
         <h2>Idade</h2>
@@ -95,47 +116,63 @@
     </div>
 
     <div>
-        <h1>Tabuada</h1>
+        <h1 class="press-start-2p-regular">Tabuada</h1>
         <input type="number" id="numero" placeholder="Digite um numero para ter sua tabuada">
         <button onclick="tabuadaPersonalizada()">Listar</button>
         <p id="resultado2"></p>
     </div>
 
     <div>
-        <h1>-Soma de Pares-</h1>
+        <h1 class="press-start-2p-regular">-Soma de Pares-</h1>
         <input type="number" id="somaP">
         <button onclick="somaParesWhile()">Somar</button>
         <p id="resultadoSoma"></p>
     </div>
 
     <div>
-        <h1>Validação</h1>
+        <h1 class="press-start-2p-regular">Validação</h1>
         <label for="senhaInput">Digite a senha:((sena123))</label>
-        <input type="password" id="senhaInput">
-        
+        <input type="password" id="senhaInput" placeholder="*************">
+
         <button id="btnVerificar" onclick="validaSenha()">Verificar</button>
-        
+
         <p id="mensagemAcesso">Você tem 3 tentativa(s) restante(s).</p>
     </div>
 
     <div>
-        <h1>Calcular</h1>
+        <h1 class="press-start-2p-regular">Fatorial</h1>
+        <input type="number" id="numeral" placeholder="Digite um numero inteiro!">
+        <button onclick="calcularFatorial()">Fatorar</button>
+        <p id="calculo2"></p>
     </div>
     <div>
-        <h1>Calcular</h1>
-
+        <h1 class="press-start-2p-regular">Nº Primo</h1>
+        <input type="number" id="nPrimo" placeholder="Digite um numero valido!">
+        <button onclick="verificarPrimo()">Verificar</button>
+        <p id="saidaPrimo"></p>
     </div>
     <div>
-        <h1>Calcular</h1>
-
+        <h1 class="press-start-2p-regular">Media</h1>
+        <input type="text" id="mediana" placeholder="Digite os números separados por vírgulas ou +"> <button
+            onclick="mediaAritmetica()">Media</button>
+        <p id="mediaResultado"></p>
     </div>
     <div>
-        <h1>Calcular</h1>
-
+        <h1 class="press-start-2p-regular">Contagem Regreciva</h1>
+        <input type="numer" id="contadorDown" placeholder="">
+        <button onclick="contadorRegressivo()">Contar</button>
+        <p id="contagem"></p>
     </div>
     <div>
-        <h1>Calcular</h1>
-
+        <h1 class="press-start-2p-regular">Verificação de múltiplos</h1>
+        <label for="numeroInicial">Número Inicial:</label>
+        <input type="number" id="numeroInicial" placeholder="Ex: 1">
+        <br><br>
+        <label for="numeroFinal">Número Final:</label>
+        <input type="number" id="numeroFinal" placeholder="Ex: 15">
+        <br><br>
+        <button onclick="verificadorMultiplos()">Verificar</button>
+        <p id="vmResultado"></p>
     </div>
 
     <script src="questao1.js"></script>
